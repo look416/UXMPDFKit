@@ -168,10 +168,10 @@ extension UXMSinglePageViewer: UICollectionViewDelegateFlowLayout {
             // Find proper aspect ratio so that cell is full width
             let widthMultiplier: CGFloat
             let heightMultiplier: CGFloat
-            if contentViewSize.width == bounds.width {
+            if contentViewSize.width >= bounds.width {
                 widthMultiplier = bounds.height / contentViewSize.height
                 heightMultiplier = 1
-            } else if contentViewSize.height == bounds.height {
+            } else if contentViewSize.height >= bounds.height {
                 heightMultiplier = bounds.width / contentViewSize.width
                 widthMultiplier = 1
             } else {
