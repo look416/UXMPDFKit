@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         let document = try! UXMPDFDocument(filePath: url, password: "")
         
         self.collectionView.document = document
+        let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.scrollDirection = UICollectionViewScrollDirection.vertical
     }
 }
 
